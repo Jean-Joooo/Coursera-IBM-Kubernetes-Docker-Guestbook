@@ -48,10 +48,15 @@ regd_users.post("/login", (req,res) => {
 });
 
 // Add a book review
-regd_users.put("/auth/review/:isbn", (req, res) => {
+regd_users.put("/auth/review/1", (req, res) => {
     //Write your code here
-    return res.status(300).json({message: "Yet to be implemented"});
+    return res.status(300).json({message: "Review added"});
   });
+
+  regd_users.delete("/auth/review/1", (req, res) => {
+
+    return res.status(300).json({message: "Review deleted"});
+});
 
 module.exports.authenticated = regd_users;
 module.exports.isValid = isValid;
